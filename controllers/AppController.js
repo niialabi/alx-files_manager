@@ -15,8 +15,8 @@ const AppController = {
 
   getStats: async (req, res) => {
     try {
-      const nbUsers = dbClient.nbUsers();
-      const nbFiles = dbClient.nbFiles();
+      const nbUsers = await dbClient.nbUsers();
+      const nbFiles = await dbClient.nbFiles();
 
       if (dbClient.isAlive) {
         return res.status(200).json({ users: `${nbUsers}`, files: `${nbFiles}` });
