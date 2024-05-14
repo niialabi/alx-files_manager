@@ -19,7 +19,7 @@ const AppController = {
       const nbFiles = await dbClient.nbFiles();
 
       if (dbClient.isAlive) {
-        return res.status(200).json({ users: `${nbUsers}`, files: `${nbFiles}` });
+        return res.status(200).json({ users: nbUsers, files: nbFiles });
       }
       return res.status(500).json({ error: 'Service Unavailable' });
     } catch (error) {
