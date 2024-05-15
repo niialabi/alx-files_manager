@@ -31,8 +31,6 @@ const UsersController = {
     try {
       const xToken = req.headers['x-token'];
       const redisTokenId = await redisClient.get(`auth_${xToken}`);
-      console.log(redisTokenId);
-      console.log('here we are');
       const user = await dbClient.db.collection('users').findOne({ _id: ObjectId(redisTokenId) });
       if (!user) {
         return res.status(401).json({ error: 'Unauthorized' });
