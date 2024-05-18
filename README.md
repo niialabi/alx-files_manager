@@ -1,4 +1,4 @@
-Sure, here's a comprehensive README file for the GitHub repo containing the "0x04. Files manager" project:
+Sure, here's a comprehensive README file for the GitHub repo containing our "0x04. Files manager" project:
 
 # 0x04. Files Manager
 
